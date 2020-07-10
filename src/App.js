@@ -12,8 +12,8 @@ function App() {
   const [ value, setValue ] = useState(0);
   
   const handleSubmit = (evt) => {
-      evt.preventDefault(); // Prevent browser reload on submit
-      fibonacciWorker.postMessage(value);  // Send value to fibonacciWorker
+    evt.preventDefault(); // Prevent browser reload on submit
+    fibonacciWorker.postMessage(value);  // Send value to fibonacciWorker
   }
 
   // Add event listener to capture messages from the web worker
@@ -39,7 +39,8 @@ function App() {
             <h6>
               Warning: Value over 34 might take a while to return a result
             </h6>
-          ) : <div></div>}
+          ) : <div></div>
+        }
         <div>Result : {result}</div>
       </header>
     </div>
